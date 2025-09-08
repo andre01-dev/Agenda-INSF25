@@ -1,0 +1,57 @@
+import { useState } from 'react';
+import api from '../api.js'
+import { Link } from 'react-router';
+import './listarAgenda.scss'
+
+export default function Listar (){
+
+    const [Agenda, setAgenda] = useState([])
+    
+
+    
+    async function listar() {
+        await api.get('/eventos')
+        .then(resposta => setAgenda(resposta.data));
+    }
+
+    return (
+        <div className='container'>
+            <div className='cabecalho'>
+                <img className='logo' src="/public/agenda.webp" alt="" height={60} />
+                <h1>Agenda Frei</h1>
+                <div className='navegacao'>
+                    <h2>Início</h2>
+                    <h2>Cadastro</h2>
+                </div>
+            </div>
+            <div className='linha'></div>
+
+            <h1>Total de Eventos:</h1>
+           
+           <Link to = {"/Cadastrar"}>
+            <h2>Cadastro</h2>
+           </Link>
+  
+            <br />
+            <button onClick={listar}>butao</button>
+            <br />
+            <br />
+
+            {
+                Agenda.map(evento => {
+
+                    return <div>
+                        <h1>{evento.titulo}</h1>
+                        <p>{evento.descricao}</p>
+                    </div>
+                })
+            }
+
+            <div className='rodape'>
+                
+            </div>
+
+        </div>
+        
+    );
+}
