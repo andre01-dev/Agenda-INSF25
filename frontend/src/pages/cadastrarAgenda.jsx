@@ -3,8 +3,8 @@ import api from '../api.js'
 import './cadastrarAgenda.scss'
 
 export default function Cadastrar() {
-  const [titulo, setTitulo] = useState('')
-  const [descricao, setDescricao] = useState('')
+  const [titulo, setTitulo] = useState('Evento x')
+  const [descricao, setDescricao] = useState('Descrição do evento ')
 
   const hoje = new Date().toISOString().split("T")[0];
   const [data, setData] = useState(hoje)
