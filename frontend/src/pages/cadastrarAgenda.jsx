@@ -5,7 +5,9 @@ import './cadastrarAgenda.scss'
 export default function Cadastrar() {
   const [titulo, setTitulo] = useState('')
   const [descricao, setDescricao] = useState('')
-  const [data, setData] = useState('')
+
+  const hoje = new Date().toISOString().split("T")[0];
+  const [data, setData] = useState(hoje)
 
   async function criar() {
     try {
