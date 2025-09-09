@@ -21,6 +21,9 @@ export default function Cadastrar() {
       alert(e.response?.data?.erro || 'Erro ao criar evento')
     }
   }
+  async function excluir() {
+    
+  }
 
   return (
     <div>
@@ -35,7 +38,9 @@ export default function Cadastrar() {
       <label>Data</label>
       <input type='date' value={data} onChange={(e) => setData(e.target.value)} />
       <br />
-      <button onClick={criar}>Criar</button>
+      <button onClick={excluir}>Excluir</button>
+      <br />
+      <button onClick={criar}>Salvar</button>
       <br />
 
       <footer className='rodape'>
