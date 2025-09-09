@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+
+.rodape {
+    background-color: #5C4742;
+    color: #fff;
+    padding: 20px 40px;
+    margin-top: 40px;
+
+    .footer-conteudo {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      .footer-coluna {
+        flex: 1;
+        min-width: 180px;
+
+        h4 {
+          font-size: 16px;
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+
+        p,
+        span {
+          font-size: 14px;
+          margin: 4px 0;
+        }
+      }
+
+      .logo-coluna {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .footer-logo {
+          width: 50px;
+          margin-bottom: 5px;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .footer-frei {
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 10px;
+    }
+  }

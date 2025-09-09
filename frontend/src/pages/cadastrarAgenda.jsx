@@ -35,6 +35,38 @@ export default function Cadastrar() {
       <br />
       <button onClick={criar}>Criar</button>
       <br />
+
+      <footer className='rodape'>
+        <div className="footer-conteudo">
+          <div className="footer-coluna logo-coluna">
+            <img src="/public/agenda.webp" alt="Agenda Logo" className="footer-logo" />
+            <span>AGENDA</span>
+          </div>
+
+          <div className="footer-coluna">
+            <h4>Contato</h4>
+            <p>(11) 91234-5678</p>
+            <p>agenda@frei.com.br</p>
+          </div>
+
+          <div className="footer-coluna">
+            <h4>Desenvolvido por</h4>
+            <p>Caio Sousa Mello</p>
+            <p>André Guilherme Sjydlovski</p>
+          </div>
+
+          <div className="footer-coluna">
+            <h4>Turma</h4>
+            <p>Informática A</p>
+          </div>
+        </div>
+
+        <div className="footer-frei">
+          <p>2025 © Instituto Nossa Senhora de Fátima</p>
+        </div>
+      </footer>
     </div>
+
+   
   )
 }
