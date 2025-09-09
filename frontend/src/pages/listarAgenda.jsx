@@ -6,9 +6,7 @@ import './listarAgenda.scss'
 export default function Listar (){
 
     const [Agenda, setAgenda] = useState([])
-    
-
-    
+ 
     async function listar() {
         await api.get('/eventos')
         .then(resposta => setAgenda(resposta.data));
@@ -37,12 +35,21 @@ export default function Listar (){
             <br />
             <br />
 
+            <h3>Total de eventos: {Agenda.length}</h3>
+
             {
                 Agenda.map(evento => {
 
-                    return <div>
-                        <h1>{evento.titulo}</h1>
-                        <p>{evento.descricao}</p>
+                return <div className="container-listar-agenda">
+                    <div className="lista-cartao">
+                        {Agenda.map(evento => (
+                        <div className="cartao" key={evento.id}>
+                            <h1>{evento.titulo}</h1>
+                            <p>{evento.descricao}</p>
+                            <p>{evento.dataevento}</p>
+                        </div>
+                        ))}
+                    </div>
                     </div>
                 })
             }

@@ -23,5 +23,39 @@
         justify-content: center;
         border-radius: 15px;
     }
+    .container-listar-agenda {
+    .cabecalho {
+        display: flex;
+        justify-content: space-between;
 
+        img {
+            height: 60px;
+            width: 70px;
+        }
+    }
+
+    .lista-cartao {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .cartao {
+            background-color: #0A1128;
+            padding: 8px;
+            border-radius: 8px;
+            width: 300px;
+            h1 {
+                color: #F0EDEE;
+            }
+
+            p {
+                color: #F0EDEE;
+            }
+
+            h3 {
+                color: #F0EDEE;
+            }
+            }
+        }
+    }
 }
