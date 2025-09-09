@@ -45,8 +45,11 @@ export default function Listar (){
                         {Agenda.map(evento => (
                         <div className="cartao" key={evento.id}>
                             <h1>{evento.titulo}</h1>
-                            <p>{evento.descricao}</p>
-                            <p>{evento.dataevento}</p>
+                            <h4>{evento.descricao}</h4>
+                            <div className='data'>
+                            <p>{new Date(evento.dataevento).toLocaleDateString('pt-BR')}</p>
+                            <img src="/public/calendario.png" height='22px' width='22px' />
+                                 </div>
                         </div>
                         ))}
                     </div>

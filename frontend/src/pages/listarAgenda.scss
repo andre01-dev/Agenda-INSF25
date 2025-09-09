@@ -45,11 +45,23 @@
             border-radius: 8px;
             width: 300px;
             h1 {
+                
+                color: #F0EDEE;
+            }
+            h4{
                 color: #F0EDEE;
             }
 
             p {
+                text-align: end;
                 color: #F0EDEE;
+            }
+            .data{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                gap: 10px;
+                margin-right: 5px;
             }
 
             h3 {
