@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import api from '../api.js'
 import './cadastrarAgenda.scss'
+import { Link } from 'react-router';
 
 export default function Cadastrar() {
-  const [titulo, setTitulo] = useState('Evento x')
+  const [titulo, setTitulo] = useState('Evento')
   const [descricao, setDescricao] = useState('Descrição do evento ')
 
   const hoje = new Date().toISOString().split("T")[0];
@@ -22,26 +23,44 @@ export default function Cadastrar() {
     }
   }
   async function excluir() {
-    
+
   }
 
   return (
-    <div>
-      <h1>Agenda!</h1>
+    <div className='container-cadastrar'>
+      <div className='cabecalho'>
+        <img className='logo' src="/public/agenda.webp" alt="" height={50} />
+        <h1>Agenda Frei</h1>
+        <div className='navegacao'>
+          <Link to={"/"}>
+          <h2 className='link'>Início</h2>
+          </Link>
+          <Link to={"/Cadastrar"}>
+            <h2 className='link'>Cadastro</h2>
+          </Link>
+        </div>
+      </div>
+      <div className='linha'></div>
 
-      <label>Titulo</label>
-      <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-      <br />
-      <label>Descricao</label>
-      <input value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-      <br />
-      <label>Data</label>
-      <input type='date' value={data} onChange={(e) => setData(e.target.value)} />
-      <br />
-      <button onClick={excluir}>Excluir</button>
-      <br />
-      <button onClick={criar}>Salvar</button>
-      <br />
+      <div className='body'>
+        <div className='inputs'>
+          <label>Titulo</label>
+          <input className='estilo-input' value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+          <br />
+          <label>Descricao</label>
+          <input className='estilo-input' value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+          <br />
+          <label>Data</label>
+          <input className='estilo-input' type='date' value={data} onChange={(e) => setData(e.target.value)} />
+          <br />
+          <div className='botoes'>
+          <button className='botao' onClick={excluir}>Excluir</button>
+          <br />
+          <button className='botao' onClick={criar}>Salvar</button>
+          <br />
+          </div>
+        </div>
+      </div>
 
       <footer className='rodape'>
         <div className="footer-conteudo">
@@ -59,7 +78,7 @@ export default function Cadastrar() {
           <div className="footer-coluna">
             <h4>Desenvolvido por</h4>
             <p>Caio Sousa Mello</p>
-            <p>André Guilherme Sjydlovski</p>
+            <p>André Guilherme O. Sjydlovski</p>
           </div>
 
           <div className="footer-coluna">
@@ -74,6 +93,6 @@ export default function Cadastrar() {
       </footer>
     </div>
 
-   
+
   )
 }

@@ -18,28 +18,23 @@ export default function Listar() {
   return (
     <div className='container'>
       <div className='cabecalho'>
-        <img className='logo' src="/public/agenda.webp" alt="" height={60} />
+        <img className='logo' src="/public/agenda.webp" alt="" height={50} />
         <h1>Agenda Frei</h1>
         <div className='navegacao'>
-          <h2>Início</h2>
-          <h2>Cadastro</h2>
+          <Link to={"/"}>
+            <h2 className='link'>Início</h2>
+          </Link>
+          <Link to={"/Cadastrar"}>
+            <h2 className='link'>Cadastro</h2>
+          </Link>
         </div>
       </div>
       <div className='linha'></div>
-
-      <h1>Total de Eventos:</h1>
-
-      <Link to={"/Cadastrar"}>
-        <h2>Cadastro</h2>
-      </Link>
-
       <br />
 
-       
-
+          <h3 className="contador-eventos">Total de eventos: {Agenda.length}</h3>
       <div className="container-listar-agenda">
         <div className="cabecalho-eventos">
-             <h3 className="contador-eventos">Total de eventos: {Agenda.length}</h3>
         </div>
         <div className="lista-cartao">
           {Agenda.map(evento => (
@@ -48,14 +43,14 @@ export default function Listar() {
               <h4>{evento.descricao}</h4>
               <div className='data'>
                 <p>{new Date(evento.dataevento).toLocaleDateString('pt-BR')}</p>
-                <img src="/public/calendario.png" height='22px' width='22px' />
+                <img className='calendario' src="/public/calendario.png" height='22px' width='22px' />
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      
+
       <footer className='rodape'>
         <div className="footer-conteudo">
           <div className="footer-coluna logo-coluna">
@@ -72,7 +67,7 @@ export default function Listar() {
           <div className="footer-coluna">
             <h4>Desenvolvido por</h4>
             <p>Caio Sousa Mello</p>
-            <p>André Guilherme Sjydlovski</p>
+            <p>André Guilherme O. Sjydlovski</p>
           </div>
 
           <div className="footer-coluna">

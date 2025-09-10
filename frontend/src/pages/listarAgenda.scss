@@ -1,10 +1,19 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
 .container {
+  h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
   .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -18,6 +27,11 @@ html, body {
       display: flex;
       gap: 10px;
       margin-right: 35px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 
@@ -30,11 +44,19 @@ html, body {
     justify-content: center;
     border-radius: 15px;
   }
+  .contador-eventos {
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5C4742;
+    margin-left: 100px;
+  }
 
   .container-listar-agenda {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .cabecalho {
       display: flex;
       justify-content: space-between;
@@ -43,22 +65,16 @@ html, body {
         height: 60px;
         width: 70px;
       }
-      .cabecalho-eventos {
-            width: 100%;
-            max-width: 1000px; 
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 10px;
 
-    .contador-eventos {
+      .cabecalho-eventos {
+        width: 100%;
+        max-width: 1000px;
         display: flex;
         justify-content: flex-start;
-      font-size: 18px;
-      font-weight: bold;
-      color: #5C4742;
-        }
+        margin-bottom: 10px;
+
+      }
     }
-}
 
     .lista-cartao {
       display: flex;
@@ -70,18 +86,28 @@ html, body {
         background-color: #5C4742;
         padding: 8px;
         width: 300px;
+        height: 110px;
+        
 
         h1 {
           color: #F0EDEE;
+          margin-top: -0.5px;
+          margin-left: 8px;
         }
 
         h4 {
           color: #F0EDEE;
+          margin-top: -1px;
+          margin-left: 8px;
         }
 
         p {
           text-align: end;
           color: #F0EDEE;
+          margin-top: -1px;
+        }
+        .calendario{
+          margin-top: -20px;
         }
 
         .data {
@@ -99,12 +125,12 @@ html, body {
     }
   }
 
-  
+
   .rodape {
     background-color: #5C4742;
     color: #fff;
     padding: 20px 40px;
-    margin-top: 40px;
+    margin-top: 52px;
 
     .footer-conteudo {
       display: flex;

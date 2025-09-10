@@ -4,9 +4,113 @@ html, body {
   height: 100%;
 }
 
+.container-cadastrar {
+  h1{
+    font-size: 23px;
+  }
+  h2{
+    font-size: 17px;
+  }
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    .logo {
+      margin-left: 35px;
+    }
 
-.rodape {
+    .navegacao {
+      display: flex;
+      gap: 10px;
+      margin-right: 35px;
+      a{
+        text-decoration:none;
+        color: black;
+      }
+    }
+  }
+
+  .linha {
+    width: 95%;
+    height: 4px;
+    margin-left: 30px;
+    background-color: #5C4742;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+  }
+
+  .container-listar-agenda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    .cabecalho {
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        height: 60px;
+        width: 70px;
+      }
+      .cabecalho-eventos {
+            width: 100%;
+            max-width: 1000px; 
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+
+    .contador-eventos {
+        display: flex;
+        justify-content: flex-start;
+      font-size: 18px;
+      font-weight: bold;
+      color: #5C4742;
+        }
+    }
+}
+
+    .lista-cartao {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .cartao {
+        background-color: #5C4742;
+        padding: 8px;
+        width: 300px;
+
+        h1 {
+          color: #F0EDEE;
+        }
+
+        h4 {
+          color: #F0EDEE;
+        }
+
+        p {
+          text-align: end;
+          color: #F0EDEE;
+        }
+
+        .data {
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          gap: 10px;
+          margin-right: 5px;
+        }
+
+        h3 {
+          color: #F0EDEE;
+        }
+      }
+    }
+  }
+
+  
+  .rodape {
     background-color: #5C4742;
     color: #fff;
     padding: 20px 40px;
@@ -59,3 +163,34 @@ html, body {
       padding-top: 10px;
     }
   }
+  .body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    .inputs{
+      padding: 50px;
+      
+      display: flex;
+      flex-direction: column;
+  
+      .estilo-input{
+        width: 750px;
+        height: 33px;
+        border-radius: 7px;
+      }
+      .botoes{
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        .botao{
+          width: 200px;
+          height: 35px;
+          border-radius: 7px;
+          font-weight: 700;
+          background-color: #FAC748;
+        }
+      }
+    }
+
+  }
+}
